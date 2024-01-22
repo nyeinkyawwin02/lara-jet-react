@@ -7,7 +7,7 @@ import InputError from "@/Jetstream/InputError";
 import FormSection from "@/Jetstream/FormSection";
 
 const CreateTeamForm = () => {
-  const { user: authUser } = usePage().props;
+  const { user: authUser } = usePage().props.auth;
   const { data, setData, errors, post, processing } = useForm({
     name: "",
   });

@@ -10,13 +10,9 @@ import {
 } from "@/Icons";
 
 const Welcome = () => {
-  const {
-    user: authUser,
-    canLogin,
-    canRegister,
-    laravelVersion,
-    phpVersion,
-  } = usePage().props;
+  const { canLogin, canRegister, laravelVersion, phpVersion } = usePage().props;
+
+  const { user: authUser } = usePage().props.auth;
 
   return (
     <div className="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
